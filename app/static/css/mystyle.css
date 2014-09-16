@@ -1,0 +1,11 @@
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+   /* For mobile, it's typically better to position checkbox on top of clickable
+      area and turn opacity to 0 instead. */
+}
+
+input[type=checkbox]:checked ~ label {
+   background: #00FFFF;
+}
