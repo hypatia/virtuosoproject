@@ -17,5 +17,10 @@ def homepage():
     wordlist = random.sample(full_wordlist, 24)
     return render_template('index.html', wordlist = wordlist)
 
+
+@app.route('/goodbye', methods=['GET'])
+def quit():
+    return render_template('goodbye.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
