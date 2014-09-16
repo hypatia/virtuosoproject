@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-  {% for word in wordlist %}
-  <div>{{ word }}</div>
-  {% endfor %}
-</div>
+
+<div class="container-fluid">
+      <div class="row">
+    <form action="results.html" method="get">
+      {% for word in wordlist %}
+        <div class="col-md-2"><input type="checkbox" name="{{ word }}" id="{{ word }}" value="{{ word }}">
+      <label for="{{ word }}">{{ word }}</label></div>
+      {% endfor %}
+    </div>
+      <input type="submit" value="Submit" />
+    </form>
+
 {% endblock %}
